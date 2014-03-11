@@ -1,0 +1,104 @@
+body {
+    background: #fff;
+    color: #303030;
+    font: 300 14px/1.5 Open Sans, FreeSans, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 8em auto;
+    width: 960px;
+}
+.column {
+    float: left;
+    margin-bottom: 4em;
+    margin-right: 40px;
+    width: 210px;
+}
+.column:last-child {
+    margin-right: 0;
+}
+.footer {
+    border-top: 1px solid #c0c0c0;
+    clear: both;
+    margin: 0 auto 4em;
+    padding-top: 1em;
+}
+
+h1, h2 {
+    font-weight: 300;
+    margin: 0;
+}
+h1 {
+    font-size: 1.65em;
+}
+h2 {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 2em;
+}
+h3 {
+    font-size: 1.5em;
+    margin: 0 0 1em;
+}
+h4 {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 1.5em 0 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    height: 140px;
+    width: 140px;
+}
+
+a {
+    color: #000;
+}
+
+
+ul,li {
+    list-style: none;
+    font-size: 95%;
+    padding-left: 5px;
+}
+
+.date {
+    color: #999;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.dots {
+    float: right;
+    padding-right: 30px;
+}
+
+.list {
+    /*font-size: 90%;
+    padding-left: 5px;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+
+.posts {
+    font-size: 95%;
+    text-decoration: none;
+}
+
+.posts:hover {
+    text-decoration: underline;
+}
