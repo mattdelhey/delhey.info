@@ -85,6 +85,9 @@ ul,li {
     padding-right: 30px;
 }
 
+.font90 { font-size: 90% }
+.font95 { font-size: 95% }
+
 .list {
     /*font-size: 90%;
     padding-left: 5px;*/
