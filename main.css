@@ -105,3 +105,9 @@ ul,li {
 .posts:hover {
     text-decoration: underline;
 }
+
+.roughtheory {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Helvetica;
+}
