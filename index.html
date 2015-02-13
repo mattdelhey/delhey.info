@@ -1,130 +1,123 @@
-<!--Adapted from James Coglan -->
 <!doctype html>
 <html>
-  <head>
+  <head>    
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-    <title>Matt Delhey</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300" rel="stylesheet" type="text/css">
-    <link href="./main.css" rel="stylesheet" type="text/css">
+    <title>matt delhey</title>
 
-    <script> <!-- Google analyics -->
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <style>
+      h1 {
+        font-family: sans-serif, 'Open Sans', helvetica, arial;
+        font-size: 12pt;
+        font-color: #303030;
+        font-weight: 100;
+        text-align: center;
+        border: 1px solid black;
+        display: inline;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }      
+
+      p {
+        font-family: sans-serif, 'Open Sans', Helvetica;
+        font-size: 10pt;
+      }
+
+      div {
+        margin-top: 0px;
+        margin-bottom: 40px;
+      }
+
+      a:visited { color: rgb(120, 60, 60); }
+      a:active  { color: rgb(120, 60, 60); }
+      a:hover   { color: rgb(200, 60, 60); }
+      a:link    { color: rgb(200, 60, 60); }
+
+      body {
+        background-color: #FEFEFA;
+        background-color: rgb(255, 255, 245);
+      }
       
-      ga('create', 'UA-39546023-3', 'auto');
-      ga('send', 'pageview');
+      .container {
+        margin: 1in;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .listx {
+        display: none
+      }
+
+      img {
+        padding: 5px;
+        margin: 0px;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+    <script type="text/javascript">
+      jQuery(function(){
+      $( "#list" ).click(function() {
+      $( "#listx" ).toggle( "slow", function() {
+      });
+      });
+      });
     </script>
 
   </head>
+  
   <body>
-
     <div class="container">
-      <div class="column">
-        <img alt="Matt Delhey" src="./ava.jpg">
-        <h1 class="roughtheory">Matt Delhey</h1>
-        <h2>student / statistician</h2>
-      </div>
+      <center>
+	<h1 class="title">matt delhey</h1>
+	<div>
+	  <p>
+	    student / statistician<br/>
+	    <a href="https://github.com/mattdelhey">github</a>
+	  </p>
+	  <!-- <div id="list" style="padding: none; margin: none;"><p> -->
+	  <!--     what i do -->
+	  <!-- </p></div> -->
+	  <!-- <div id="listx" style="display: none; padding: none; margin: none"> -->
+	  <!--   <p>project 1</p> -->
+	  <!--   <p>project 2</p> -->
+	  <!-- </div> -->
+	</div>
+	<h1>top of mind</h1>
+	<div>
+	  <p><a href="inc/induc.pdf">
+	      statistical methods and scientific induciton (fisher, 1955)
+	  </a></p>
+	  <p><a href="inc/mobl.pdf">
+	      moral obligation after the death of god (engelhardt, 2010)	      
+	  </a></p>
+	</div>
+	<h1>required reading</h1>
+	<div>
+	  <p>
+	    the pure concept must re-establish for philosophy the speculative good friday in place
+	    of the historic good friday. good friday must be speculatively re-established in the whole
+	    truth and harsheness of its god-forsakenness
+	  </p>
+	  <p>
+	    (g.w.f. hegel, faith and knowledge 1802)
+	  </p>
+	</div>
+	<h1>ideological apparatuses</h1>
+	<div>
+	  <p>
+	    <a href="https://ktru.org"><img src="inc/ktru-smallest.png"></a>
+	    <a href="http://3ammagazine.com"><img src="inc/3am-small.png"></a>
+	  </p>
+	</div>
+    </center>
 
-      <div class="column">
-        <h3 class="roughtheory">Projects</h3>
-
-	<a href="http://roughtheory.com/posts/galaxy-zoo.html">Galazy Zoo 2</a>
-	<p>
-	  Kaggle competition for predicting human responses of galaxy
-	  classification. 
-	  (<a href="https://github.com/mattdelhey/kaggle-galaxy">Github</a>)
-	</p>
-	
-	<br />
-
-	<a href="https://github.com/mattdelhey/mdutils">mdutils</a>
-	<p>
-	  Collection of various, useful functions for data anlaysis in R. 
-	  (<a href="https://github.com/mattdelhey/mdutils">Github</a>)
-	</p>
-
-      </div>
-
-      <div class="column">
-        <a href="http://roughtheory.com" style="text-decoration:none"><h3 class="roughtheory">Rough Theory</h3></a>
-
-	<p>
-	  A rough attempt at questioning, perhaps interpretation, limited by practice. In other words, I'd rather not say.
-	</p>
-
-	<h4>Latest posts</h4>
-	<p>&raquo; <a href="http://roughtheory.com/posts/ess-rmarkdown.html" class="posts">
-	    Using R Markdown in Emacs</a>
-	</p>
-	<p>&raquo; <a href="http://roughtheory.com/posts/wip-rice.html" class="posts">
-	    Rice Course Enrollment</a>
-	</p>
-	    
-
-	<br />
-
-	<p class="quote">Whatever it is, I'm against it </p>
-	<p>
-	  <span class="date">Horse Feathers & 3:AM Magazine
-	</p>
-
-      </div>
-
-      <div class="column">
-        <h3 class="roughtheory">About</h3>
-
-	<p class="quote" style="font-size: 95%">
-	  The pure concept must re-establish for philosophy the
-	  speculative Good Friday in place of the historic Good
-	  Friday. Good Friday must be speculatively re-established
-	  in the whole truth and harsheness of its
-	  God-forsakenness.
-	</p>
-	<p>
-	  <span class="date">G.W.F Hegel</span>
-	  <span class="dots"><a href="http://books.google.com/books/about/Hegel_Faith_and_Knowledge.html?id=aUL8cP8yt8cC">...</a></span>
-	</p>
-
-	<!--
-	<p class="quote">
-	  What is rational is actual, 
-	  what is actual is rational.
-	</p>
-	<p>
-	  <span class="date">G.W.F Hegel</span>
-	  <span class="dots"><a href="http://en.wikipedia.org/wiki/Elements_of_the_Philosophy_of_Right">...</a></span>
-	</p>	
-	-->
-
-	<h4>Matt Delhey is...</h4>
-	<p class="list font95">&raquo; Studying at Rice University. 
-	  <br />&raquo; DJ and Music Director at <a href="https://ktru.org">KTRU</a>.
-	  <br />&raquo; Yet to be seen&hellip;</p>
-	</ul>
-
-      </div>
-    </div>
-
-    <div class="container footer">
-      <div class="column">
-        <p style="font-size:90%;">Copyright &copy; 2014</p>
-      </div>
-
-      <div class="column"></div>
-
-      <div class="column">
-        <p><a href="https://github.com/mattdelhey">GitHub</a> /
-	  <a href="https://linkedin.com/in/mattdelhey">LinkedIn</p>
-      </div>
-
-      <div class="column">
-	<a href="emailto:matt.delhey@rice.edu">matt.delhey@rice.edu</a>
-      </div>
-    </div>
-
+    </div>    
   </body>
 </html>
 

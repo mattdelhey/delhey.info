@@ -1,0 +1,63 @@
+body {
+    background: #fff;
+    color: #303030;
+    font-size: 10pt;
+    font-family: Courier;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify: distribute;
+}
+
+.title {
+    font-size: 10pt;
+    font-family: Courier, Open Sans, FreeSans, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    margin: 8em auto;
+    width: 960px;
+}
+
+.column {
+    float: left;
+    margin-bottom: 4em;
+    margin-right: 40px;
+    width: 210px;
+}
+.column:last-child {
+    margin-right: 0;
+}
+.footer {
+    border-top: 1px solid #c0c0c0;
+    clear: both;
+    margin: 0 auto 4em;
+    padding-top: 1em;
+}
+
+
+.onclick-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.onclick-menu:before {
+    content: "projects";
+}
+
+.onclick-menu:focus .onclick-menu-content {
+    display: block;
+}
+
+.onclick-menu-content {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
