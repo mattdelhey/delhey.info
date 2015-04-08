@@ -2,7 +2,7 @@
 <html>
   <head>    
     <meta charset="utf-8">
-    <title>title</title>
+    <title> </title>
     <link rel="shortcut icon" href="inc/transparent.png">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -16,7 +16,6 @@
       ga('create', 'UA-39546023-3', 'auto');
       ga('send', 'pageview');
     </script>
-
 
     <style>
       h1 {
@@ -36,6 +35,8 @@
       p {
         font-family: sans-serif, 'Open Sans', Helvetica;
         font-size: 10pt;
+        margin: 0px;
+        padding: 10px;
       }
 
       div {
@@ -49,89 +50,123 @@
       a:link    { color: rgb(200, 60, 60); }
 
       body {
-        background-color: #FEFEFA;       
-      background-color: #ffffff;
-      background-color: rgb(255, 255, 245);
+        background-color: rgb(255, 255, 245); /*  #ffffff;  #FEFEFA; */
+        min-width: 600px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
       
       .container {
-        margin: 1in;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .listx {
-        display: none
+        margin: 1in auto;
+        padding: 0px;
+        width: 600px;
       }
 
       img {
         padding: 5px;
         margin: 0px;
       }
+
+      /* */
+      /* 2 column left menu settings */
+      /* */
+      .leftmenu {
+       background: inherit;
+      }
+      
+      .leftmenu .colright {
+        background: inherit;
+        float:left;
+        width:200%;
+        position:relative;
+        left: 200px;
+        border-left: 1px solid black;
+      }
+      
+      .leftmenu .col1wrap {
+      float:right;
+      width:50%;
+      position:relative;
+      right:200px;
+      padding-bottom:1em;
+      }
+      
+      .leftmenu .col1 {
+      margin:0 15px 0 215px;
+      position:relative;
+      right:100%;
+      overflow:hidden;
+      }
+      
+      .leftmenu .col2 {
+      float:left;
+      width:170px;
+      width:220px;
+      position:relative;
+      right:185px;
+      }
+
+      .colmask {
+      position:relative;		/* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+      clear:both;
+      float:left;
+      width:100%;				/* width of whole page */
+      overflow:hidden;		/* This chops off any overhanging divs */
+      }
+
+
     </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        
-    <script type="text/javascript">
-      jQuery(function(){
-      $( "#list" ).click(function() {
-      $( "#listx" ).toggle( "slow", function() {
-      });
-      });
-      });
-    </script>
-
   </head>
   
   <body>
     <div class="container">
-      <center>
-	<h1 class="title">matt delhey</h1>
-	<div>
-	  <p>
-	    student / statistician<br/>
-	    <a href="https://github.com/mattdelhey">github</a><br/>
-	    <a href="http://blog.mattdelhey.com">blog</a></br>
-	  </p>
-	  <!-- <div id="list" style="padding: none; margin: none;"><p> -->
-	  <!--     what i do -->
-	  <!-- </p></div> -->
-	  <!-- <div id="listx" style="display: none; padding: none; margin: none"> -->
-	  <!--   <p>project 1</p> -->
-	  <!--   <p>project 2</p> -->
-	  <!-- </div> -->
-	</div>
-	<h1>top of mind</h1>
-	<div>
-	  <p><a href="inc/induc.pdf">
-	      statistical methods and scientific induciton (fisher, 1955)
-	  </a></p>
-	  <p><a href="inc/mobl.pdf">
-	      moral obligation after the death of god (engelhardt, 2010)	      
-	  </a></p>
-	</div>
-	<h1>required reading</h1>
-	<div>
-	  <p>
-	    the pure concept must re-establish for philosophy the speculative good friday in place
-	    of the historic good friday. good friday must be speculatively re-established in the whole
-	    truth and harsheness of its god-forsakenness
-	  </p>
-	  <p>
-	    (g.w.f. hegel, faith and knowledge 1802)
-	  </p>
-	</div>
-	<h1>ideological apparatuses</h1>
-	<div>
-	  <p>
-	    <a href="https://ktru.org"><img src="inc/ktru-smallest.png"></a>
-	    <a href="http://3ammagazine.com"><img src="inc/3am-small.png"></a>
-	  </p>
-	</div>
-    </center>
 
-    </div>    
+      <div class="colmask leftmenu">
+
+	<div class="colright">
+	  <div class="col1wrap">
+	    <div class="col1">
+	      <p>
+		student / statistician<br/>
+		<a href="https://github.com/mattdelhey">github</a><br/>
+		<a href="http://blog.mattdelhey.com">blog</a></br>
+	      </p>
+
+	      <p><a href="inc/induc.pdf">
+		  statistical methods and scientific induciton (fisher, 1955)
+	      </a></p>
+	      <p><a href="inc/mobl.pdf">
+		  moral obligation after the death of god (engelhardt, 2010)	      
+	      </a></p>
+
+	      
+	      <p>
+		the pure concept must re-establish for philosophy the speculative good friday in place
+		of the historic good friday. good friday must be speculatively re-established in the whole
+		truth and harsheness of its god-forsakenness
+	      </p>
+	      <p>
+		(g.w.f. hegel, faith and knowledge 1802)
+	      </p>
+
+	      <p>
+		<a href="https://ktru.org"><img src="inc/ktru-smallest.png"></a>
+		<a href="http://3ammagazine.com"><img src="inc/3am-small.png"></a>
+	      </p>
+	    </div>
+	  </div>
+
+	  <div class="col2">
+	    <br/>
+	    <h1 class="title">matt delhey</h1> <br/><br/><br/><br/>
+	    <h1>top of mind</h1> <br/><br/><br/><br/>
+	    <h1>required reading</h1> <br/><br/><br/><br/><br/><br/><br/>
+	    <h1>ideology</h1>
+	  </div>
+	</div>
+	
+      </div>    
   </body>
 </html>
-
