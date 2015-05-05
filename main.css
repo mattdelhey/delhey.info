@@ -23,6 +23,9 @@ h1 {
     display: inline-block;
     width: 100px;
     padding: 2px 5px 2px 5px; /* top right bottom left */
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }      
 
 p {
@@ -38,6 +41,27 @@ p {
     padding-top: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+
+.row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.row1 {
+    height: 40px;
+}
+
+.row2 {
+    height: 40px;
+}
+
+.row3 {
+    height: 250px;
+}
+
+.row4 {
+    height: 50px;
 }
 
 .description {
