@@ -1,110 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>    
-    <meta charset="utf-8">
-    <title>delhey.info</title>
-
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="shortcut icon" href="inc/transparent.png">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-    <script> <!-- Google analyics -->
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-39546023-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  
+  <style>
+    video#fullscreen-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+   }
+  </style>
   <body>
-    <div class="container">
-      
-      <div class="colmask leftmenu">
-	<div class="colright">
-	  
-	  <div class="col1wrap">
-	    <div class="col1">
-
-	      <div class="row1">
-		<p>
-		  statistician <br/>
-		  <a href="https://github.com/mattdelhey">github</a><br/>
-		</p>
-	      </div>
-
-	      <div class="row2">
-		<p class="list">
-		  <a href="https://www.youtube.com/watch?v=u4vU2KLyvfE">images for projection no. 1</a>
-		  <span class="date">may 2015</span>
-		</p>
-		<p class="description">aleatory juxtapositions of science fiction</p>
-	      </div>
-
-	      <div class="row3">
-		<p class="list">
-		  <a href="inc/delhey-model_selection_for_highdim_ggms.pdf">model selection for high-dimensional ggms</a>
-		  <span class="date">may 2015</span>
-		</p>
-		<p class="description">
-		  simulations comparing four model selection methods for gaussian
-		  graphical models: bayesian information crietria, cross-validation, stability
-		  selection, and bayesian model averaging
-		  [<a href="https://github.com/mattdelhey/bmar">r package</a>]<br/>
-		</p>
-		
-		<p class="list">
-		  <a href="inc/delhey-poisson_discriminant_analysis.pdf">linear, quadratic, and poisson discriminant analysis</a>
-		  <span class="date">dec 2014</span>
-		</p>	      
-		<p class="description">
-		  comparision of two poisson methods of discriminant analysis alongside the more popular
-		  linear and quadratic 
-	  	  [<a href="https://github.com/mattdelhey/plda">r package</a>]<br/>
-		</p>
-		
-		<p class="list">
-		  <a href="">inference for high-dimensional var models</a>
-		  <span class="date">dec 2014</span>
-		</p>
-		<p class="description">
-		  comparision of three methods for sparse estimation of high-dimentional vector
-		  autoregressive models		
-		  [<a href="https://github.com/mattdelhey/svar">r package</a>]<br/>
-		</p>
-
-		<p class="list">
-		  <a href="inc/ess-rmarkdown.pdf">using rmarkdown in emacs</a><span class="date">aug 2014</span>
-		</p>
-		<p class="description">
-		  lisp function for compiling current file in rmarkdown
-		</p>
-	      </div>
-	      
-	      <div class="row4">
-		<p>
-		  <a href="https://ktru.org"><img src="inc/ktru-smallest.png"></a>
-		</p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col2">
-	    <div class="row1">
-	      <h1 class="row1">matt delhey</h1>
-	    </div>
-	    <div class="row2">
-	      <h1 class="row2">werke</h1>
-	    </div>
-	    <div class="row3">
-	      <h1 class="row3">techne</h1>
-	    </div>
-	    <div class="row4">	     
-	      <h1 class="row4">ideology</h1>
-	    </div>
-	  </div>
-	</div>	
-      </div>    
+    <div>
+      <p>text</p>
+      <video autoplay loop id="fullscreen-video">
+        <source src="spinoza.delhey.info/images-for-projection-no1.mp4" type="video/mp4">
+        </video>
+      </div>
   </body>
+
+  <script type="text/javascript">
+   var vid = document.getElementById("fullscreen-video");
+   var loopsize = 5; // seconds
+
+   vid.addEventListener("loadedmetadata", function() {
+       var duration = vid.duration
+       vid.currentTime = getRandomInt(1, duration-loopsize);
+
+       setInterval(function() {
+           vid.currentTime = getRandomInt(1, duration-loopsize);
+       }, loopsize*1000);
+   });
+
+   function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
+  </script>
 </html>
