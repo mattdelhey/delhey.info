@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Rough Theory"
+---
+
+<style>
+div#content img {
+  max-width: 400px; 
+  max-height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+{% for post in site.categories.music %}
+    <h1 class="entry-title" id="{{ post.id }}">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    <p>{{ post.excerpt }}</p>
+{% endfor %}
+
+
+
+{% if paginator.total_pages > 1 %}
+	<div class="postnavigation">
+
+		{% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+				<a class="prev left" href="/">&larr; Newer</a>
+			{% else %}
+				<a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
+			{% endif %}
+		{% else %}
+			<span class="nope left">&larr; Newer</span>
+		{% endif %}
+
+		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+		{% if paginator.next_page %}
+			<a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
+		{% else %}
+			<span class="nope right">Older &rarr;</span>
+		{% endif %}
+
+	</div>
+{% endif %}

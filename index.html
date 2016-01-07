@@ -12,10 +12,32 @@
       z-index: -1;
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
+    }
+
+   div.box {
+       width: 400px;
+       height: 200px;
+       background: rgba(0,0,255,1);
+       position: fixed;
    }
+
+   p,a {
+       font-family: "Courier New", Courier, monospace;
+       color: white;
+       padding: 10px;
+       text-align: center;
+   }
+
   </style>
   <body>
-    <div>
+
+      <div class="box">
+          <p>ethical obligation in neurmancer and videodrome</p>
+          <p><a href="pubs/work.html">fragment entitled <i>work</i></a></p>
+      </div>
+
+
+      <div>
       <video autoplay loop id="fullscreen-video">
           <!-- <source src="spinoza.delhey.info/images-for-projection-no1.mp4" type="video/mp4"> -->
           <!-- <source src="https://www.dropbox.com/s/tdbn62cqxpx0crt/projection.mp4?dl=1" type="video/mp4"> -->
@@ -25,22 +47,72 @@
       </div>
   </body>
 
+
+  <!-- jquery for moving box -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"
+          type="text/javascript">
+  </script>
+
+  <!-- js for moving box AND video -->
   <script type="text/javascript">
+   // hook page-load for moving-box
+   $(document).ready(function() {
+       animateDiv();
+   });
+
    var vid = document.getElementById("fullscreen-video");
    var loopsize = 5; // seconds
-
+   // hook page-load for video
    vid.addEventListener("loadedmetadata", function() {
+       randomVideo(vid, loopsize);
+   });
+
+   function randomVideo(vid, loopsize) {
        var duration = vid.duration
        vid.currentTime = getRandomInt(1, duration-loopsize);
-
        setInterval(function() {
            vid.currentTime = getRandomInt(1, duration-loopsize);
        }, loopsize*1000);
-   });
+   };
 
-   function getRandomInt(min, max) {
-       return Math.floor(Math.random() * (max - min + 1)) + min;
-   }
+  function makeNewPosition() {
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    return [nh,nw];
+  };
 
+  function animateDiv() {
+    var newq = makeNewPosition();
+    var oldq = $('.box').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    var speed = 3000;
+    var speed = calcRandomSpeed();
+
+    $('.box').animate({ top: newq[0], left: newq[1] }, speed, function() {
+      animateDiv();
+    });
+  };
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+   function calcRandomSpeed() {
+       var speed = getRandomInt(0, 5000);
+       //var speed = getRandomInt(200, 10000)
+       return speed;
+   };
+
+  function calcSpeed(prev, next) {
+    var speedModifier = 0.1
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    var greatest = x > y ? x : y;
+    var speed = Math.ceil(greatest/speedModifier);
+    return speed;
+  };
   </script>
 </html>
