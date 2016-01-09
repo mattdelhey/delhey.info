@@ -19,6 +19,10 @@
        height: 200px;
        background: rgba(0,0,255,1);
        position: fixed;
+       top: 50%;
+       left: 50%;
+       margin-left: -200px;
+       margin-top: -100px;
    }
 
    p,a {
@@ -58,6 +62,7 @@
 
   <!-- js for moving box AND video -->
   <script type="text/javascript">
+
    // hook page-load for moving-box
    $(document).ready(function() {
        animateDiv();
@@ -67,7 +72,7 @@
    var loopsize = 5; // seconds
    // hook page-load for video
    vid.addEventListener("loadedmetadata", function() {
-       randomVideo(vid, loopsize);
+       randomVideo(vid, loopsize); // run video
    });
 
    function randomVideo(vid, loopsize) {
@@ -94,8 +99,11 @@
     var speed = 3000;
     var speed = calcRandomSpeed();
 
-    $('.box').animate({ top: newq[0], left: newq[1] }, speed, function() {
-      animateDiv();
+    $('.box').animate({
+        top: newq[0],
+        left: newq[1]
+      }, speed, function() {
+        animateDiv();
     });
   };
 
@@ -119,5 +127,6 @@
   };
   </script>
 </html>
+
 
 
