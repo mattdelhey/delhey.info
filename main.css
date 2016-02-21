@@ -1,0 +1,51 @@
+video#fullscreen-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+box {
+    width: 400px;
+    height: 200px;
+    background: rgba(0,0,255,1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+
+div.boxy {
+    background: rgba(0,0,255,1);
+    width: 600px;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 1in
+}
+
+body {
+    color: white;
+    text-align: left;
+    font-family: "source Code Pro", "Courier New", Courier, monospace;
+}
+
+p {
+    padding: 10px;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+}
+
