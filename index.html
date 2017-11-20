@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <link href="main.css" rel="stylesheet" type="text/css">
-    <style>body {background-color: blue}</style>
+        <meta charset="utf-8">
+        <title>matthew j delhey</title>
+
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="FitText.js/jquery.fittext.js"></script>
+        <style>body {background-color: blue}</style>
     </head>
 
     <body>
-        <p>delhey.info</p>
+
+
+        <div class="center">
+        <h1>matthew j delhey</h1>
+        <ul>
+            <li>cv</li>
+            <li>theory</li>
+            <li>emperics</li>
+            <li>dj</li>
+        </ul>
+        </div>
+
+
         <div class="box">
     </div>
       <div>
           <video autoplay muted loop id="fullscreen-video" poster="black">
-          <source type="video/mp4" src="https://github.com/mattdelhey/delhey.info/blob/gh-pages/images-for-projection-no1.mp4?raw=true">
-        </video>
+              <source type="video/mp4" src="https://github.com/mattdelhey/delhey.info/blob/gh-pages/images-for-projection-no1.mp4?raw=true">
+          </video>
       </div>
+
+      <script type="text/javascript">
+       $("h1").fitText(0.6);
+       $("li").fitText(0.8);
+      </script>
+
   </body>
 
 
@@ -46,33 +69,33 @@
        }, loopsize*1000);
    };
 
-  function makeNewPosition() {
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    return [nh,nw];
-  };
+   function makeNewPosition() {
+       // Get viewport dimensions (remove the dimension of the div)
+       var h = $(window).height() - 50;
+       var w = $(window).width() - 50;
+       var nh = Math.floor(Math.random() * h);
+       var nw = Math.floor(Math.random() * w);
+       return [nh,nw];
+   };
 
-  function animateDiv() {
-    var newq = makeNewPosition();
-    var oldq = $('.box').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    var speed = 3000;
-    var speed = calcRandomSpeed();
+   function animateDiv() {
+       var newq = makeNewPosition();
+       var oldq = $('.box').offset();
+       var speed = calcSpeed([oldq.top, oldq.left], newq);
+       var speed = 3000;
+       var speed = calcRandomSpeed();
 
-    $('.box').animate({
-        top: newq[0],
-        left: newq[1]
-      }, speed, function() {
-        animateDiv();
-    });
-  };
+       $('.box').animate({
+           top: newq[0],
+           left: newq[1]
+       }, speed, function() {
+           animateDiv();
+       });
+   };
 
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+   function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+   };
 
    function calcRandomSpeed() {
        var speed = getRandomInt(0, 5000);
@@ -80,15 +103,17 @@
        return speed;
    };
 
-  function calcSpeed(prev, next) {
-    var speedModifier = 0.1
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    var greatest = x > y ? x : y;
-    var speed = Math.ceil(greatest/speedModifier);
-    return speed;
-  };
+   function calcSpeed(prev, next) {
+       var speedModifier = 0.1
+       var x = Math.abs(prev[1] - next[1]);
+       var y = Math.abs(prev[0] - next[0]);
+       var greatest = x > y ? x : y;
+       var speed = Math.ceil(greatest/speedModifier);
+       return speed;
+   };
   </script>
+
+
 </html>
 
 
