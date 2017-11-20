@@ -1,4 +1,4 @@
-delhey.info
+mjd.website
 ==============
-[delhey.info](http://delhey.info)
+[mjd.website](http://mjd.website)
 
