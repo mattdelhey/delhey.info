@@ -1,36 +1,20 @@
 .center {
     margin: auto;
-    width: 50%;
+    width: 95%;
     height: 50%;
     border: 1px white;
     padding: 10px;
-}
-
-box {
-    width: 400px;
-    height: 200px;
-    background: rgba(0,0,255,1);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-left: -200px;
-    margin-top: -100px;
-}
-
-div.boxy {
-    background: rgba(0,0,255,1);
-    width: 600px;
-    height: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    padding: 1in
 }
 
 body {
     color: white;
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
+    font-size: 16px;
+    background-color: blue;
+}
+
+ul, li {
     font-size: 16px;
 }
 
@@ -44,10 +28,16 @@ a {
 
 h1 {
     margin-bottom: 0px;
- }
+    margin-top: 0px;
+}
+
+.list {
+    font-size: 3px;
+}
 
 .subtitle {
     padding-top: 0px;
+    margin-top: 0px;
 }
 
 .dropdown-menu {

@@ -8,84 +8,92 @@
         <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="FitText.js/jquery.fittext.js"></script>
-        <style>body {background-color: blue}</style>
     </head>
 
     <body>
-
-
-        <div class="center w3-dropdown-click">
+        <div class="center">
             <h1>Matthew J. Delhey</h1>
-            <p class="subtitle">MA student in Philosophy at Georgia State University.</p>
+            <p class="subtitle">[MA student in Philosophy at Georgia State University.]</p>
 
             <p>Hi, welcome to my personal webpage. My research interests are in continental philosophy, political theory, and digital media studies. I have a background in statistics, data science, and analytic philosophy.</p>
 
-        <ul>
-            <li>CV</li>
-            <li>Theory</li>
+            <ul class="root">
+                <li class="dropdown-list"><a href="javascript:void()" class="dropdown-toggle">CV</a>
+                    <ul class="dropdown-menu">
+                        <li class="list"><a href="inc/delhey-model_selection_for_highdim_ggms.pdf">[pdf]</a> <a href="https://github.com/mdelhey/bmar">[github]</a></li>
+                    </ul>
+            </li>
+
+            <li class="dropdown-list"><a href="javascript:void()" class="dropdown-toggle">Writing</a>
+                <ul class="dropdown-menu">
+                    <li>welp</li>
+                </ul>
+            </li>
+
             <li class="dropdown-list"><a href="javascript:void()" class="dropdown-toggle">Statistics</a>
                 <ul class="dropdown-menu">
-                    <li><a href="inc/delhey-model_selection_for_highdim_ggms.pdf">[pdf]</a> <a href="https://github.com/mdelhey/bmar">[github]</a> Model Selection for High-Dimensional Gaussian Graphical Models</li>
-                    <li><a href="inc/delhey-poisson_discriminant_analysis.pdf">[pdf]</a> <a href="https://github.com/mdelhey/plda">[github]</a> A Comparison of Linear, Quadratic, and Poisson Discriminant Analyses</li>
-                    <li><a href="inc/blah.pdf">[pdf]</a> <a href="https://github.com/mdelhey/svar">[github]</a> High-Dimensional VAR Inference with Application to Cooling Data</li>
+                    <li class="list"><a href="inc/delhey-model_selection_for_highdim_ggms.pdf">[pdf]</a> <a href="https://github.com/mdelhey/bmar">[github]</a> Model Selection for High-Dimensional Gaussian Graphical Models</li>
+                    <li class="list"><a href="inc/delhey-poisson_discriminant_analysis.pdf">[pdf]</a> <a href="https://github.com/mdelhey/plda">[github]</a> A Comparison of Linear, Quadratic, and Poisson Discriminant Analyses</li>
+                    <li class="list"><a href="inc/blah.pdf">[pdf]</a> <a href="https://github.com/mdelhey/svar">[github]</a> High-Dimensional VAR Inference with Application to Cooling Data</li>
                 </ul>
             </li>
 
             <li class="dropdown-list"><a href="javascript:void(0)" class="dropdown-toggle">Notes</a>
                 <ul class="dropdown-menu">
-                    <li><a href="inc/ess-rmarkdown.pdf">[pdf]</a> Using R Markdown in Emacs</li>
+                    <li class="list"><a href="inc/ess-rmarkdown.pdf">[pdf]</a> Using R Markdown in Emacs</li>
+                </ul>
+            </li>
+
+            <li class="dropdown-list"><a href="javascript:void()" class="dropdown-toggle">Projects</a>
+                <ul class="dropdown-menu">
+                    <li>No Lite collective</li>
+                    <li><a href="https://soundcloud.com/l_ear">DJ</li>
                 </ul>
             </li>
 
             <li class="dropdown-list"><a href="javascript:void()" class="dropdown-toggle">Files</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">[pdf]</a> <a href="http://aaaaarg.fail/thing/56c0c52f9ff37c05f8f46f0b">[link]</a> H. Tristram Engelhardt, "Moral Obligation After the Death of God: Critical Reflections on Concerns from Immanuel Kant, G. W. F. Hegel, and Elizabeth Anscombe," in <i>Social Philosophy and Policy</i> 27, no. 2 (2010): 317-340.</li>
+                    <li class="list"><a href="#">[pdf]</a> <a href="http://aaaaarg.fail/thing/56c0c52f9ff37c05f8f46f0b">[link]</a> H. Tristram Engelhardt, "Moral Obligation After the Death of God: Critical Reflections on Concerns from Immanuel Kant, G. W. F. Hegel, and Elizabeth Anscombe," in <i>Social Philosophy and Policy</i> 27, no. 2 (2010): 317-340.</li>
                 </ul>
             </li>
         </div>
 
+        <!-- FitText.js Params -->
+        <script type="text/javascript">
+         $("h1").fitText(0.6, { minFontSize: '24px', maxFontSize: '140px' });
+         $(".root > li").fitText(2.8, { minFontSize: '20px', maxFontSize: '80px' });
+         $("p").fitText(4, { minFontSize: '16px', maxFontSize: '40px' });
+         $(".list").fitText(4, { minFontSize: '16px', maxFontSize: '40px' });
+        </script>
 
-        <div class="box">
-    </div>
-
-
-    <!-- dropDown -->
-    <script type="text/javascript">
-     jQuery(document).ready(function (e) {
-         function t(t) {
-             e(t).bind("click", function (t) {
-                 t.preventDefault();
-                 e(this).parent().fadeOut()
-             })
-         }
-
-         e(".dropdown-toggle").click(function () {
-             var t = e(this).parents(".dropdown-list").children(".dropdown-menu").is(":hidden");
-             e(".dropdown-list .dropdown-menu").hide();
-             e(".dropdown-list .dropdown-toggle").removeClass("active");
-             if (t) { e(this).parents(".dropdown-list").children(".dropdown-menu").toggle().parents(".dropdown-list").children(".dropdown-toggle").addClass("active")
+        <!-- dropDown -->
+        <script type="text/javascript">
+         jQuery(document).ready(function (e) {
+             function t(t) {
+                 e(t).bind("click", function (t) {
+                     t.preventDefault();
+                     e(this).parent().fadeOut()
+                 })
              }
+             e(".dropdown-toggle").click(function () {
+                 var t = e(this).parents(".dropdown-list").children(".dropdown-menu").is(":hidden");
+                 e(".dropdown-list .dropdown-menu").hide();
+                 e(".dropdown-list .dropdown-toggle").removeClass("active");
+                 if (t) { e(this).parents(".dropdown-list").children(".dropdown-menu").toggle().parents(".dropdown-list").children(".dropdown-toggle").addClass("active")
+                 }
+             });
+             e(document).bind("click", function (t) {
+                 $(window).trigger('resize');
+                 var n = e(t.target);
+                 if (!n.parents().hasClass("dropdown-list")) e(".dropdown-list .dropdown-menu").hide();
+             });
+             e(document).bind("click", function (t) {
+                 var n = e(t.target);
+                 if (!n.parents().hasClass("dropdown-list")) e(".dropdown-list .dropdown-toggle").removeClass("active");
+             })
          });
-         e(document).bind("click", function (t) {
-             var n = e(t.target);
-             if (!n.parents().hasClass("dropdown-list")) e(".dropdown-list .dropdown-menu").hide();
-         });
-         e(document).bind("click", function (t) {
-             var n = e(t.target);
-             if (!n.parents().hasClass("dropdown-list")) e(".dropdown-list .dropdown-toggle").removeClass("active");
-         })
-     });
-    </script>
-
-    <!-- FitText.js Params -->
-    <script type="text/javascript">
-     $("h1").fitText(0.6, { minFontSize: '24px', maxFontSize: '300px' });
-     $("li").fitText(1.4, { minFontSize: '20px', maxFontSize: '200xp' });
-    </script>
+        </script>
 
   </body>
-
 </html>
-
-
 
