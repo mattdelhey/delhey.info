@@ -6,19 +6,6 @@
     padding: 10px;
 }
 
-video#fullscreen-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
-
 box {
     width: 400px;
     height: 200px;
@@ -44,6 +31,7 @@ body {
     color: white;
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
+    font-size: 16px;
 }
 
 p {
@@ -55,5 +43,22 @@ a {
 }
 
 h1 {
+    margin-bottom: 0px;
+ }
+
+.subtitle {
+    padding-top: 0px;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+a.dropdown-toggle {
+    text-decoration: underline;
 }
 
