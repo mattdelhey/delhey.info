@@ -1,0 +1,21 @@
+#+TITLE: John Stroup's Graduate School Bootcamp
+#+AUTHOR: Matthew J. Delhey
+#+DATE: April 24, 2015
+#+SETUPFILE: ~/mdelhey-org-template/template.org
+
+* Humanities Bootcamp
+- Franklin L. Baumer, /Modern European Thought: Continuity and Change in Ideas, 1600-1950/ (0023064501)
+- 
+
+* Political Philosophy Bootcamp
+- A History of Political Theory Third Edition
+
+* Art Bootcamp
+- Art in crisis : the lost center
+
+* German Bootcamp
+
+* Christianity Bootcamp
+
+* Marxism Bootcamp
+

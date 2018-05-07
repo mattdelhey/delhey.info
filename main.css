@@ -1,3 +1,17 @@
+.profile {
+    position: absolute;
+    z-index: -1;
+    right: 80px;
+    top: 80px;
+    margin: 0px;
+    height: 60%;
+    max-height: 52%;
+    min-height: 20%;
+    width: auto;
+    max-width: auto;
+    min-width: auto;
+}
+
 .center {
     margin: auto;
     width: 95%;
@@ -11,15 +25,19 @@ body {
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
     font-size: 16px;
-    background-color: blue;
+    background-color: rgb(0, 26, 225);
 }
 
 ul, li {
     font-size: 16px;
+    list-style-type: none;
+    padding-bottom: 8px;
+    padding-top: 2px;
 }
 
 p {
     padding: 10px;
+    margin-right: 35%;
 }
 
 a {
@@ -38,6 +56,7 @@ h1 {
 .subtitle {
     padding-top: 0px;
     margin-top: 0px;
+    font-style: normal;
 }
 
 .dropdown-menu {
