@@ -24,7 +24,6 @@ body {
     color: white;
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
-    font-size: 16px;
     background-color: rgb(0, 26, 225);
 }
 
@@ -38,6 +37,7 @@ ul, li {
 p {
     padding: 10px;
     margin-right: 35%;
+    font-size: 24px;
 }
 
 a {

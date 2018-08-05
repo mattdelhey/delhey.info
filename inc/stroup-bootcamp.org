@@ -3,6 +3,10 @@
 #+DATE: April 24, 2015
 #+SETUPFILE: ~/mdelhey-org-template/template.org
 
+#+BEGIN_COMMENT
+hannesstroup@yahoo.com
+#+END_COMMENT
+
 * Humanities Bootcamp
 - Franklin L. Baumer, /Modern European Thought: Continuity and Change in Ideas, 1600-1950/ (0023064501)
 - 
@@ -16,6 +20,7 @@
 * German Bootcamp
 
 * Christianity Bootcamp
+- 
 
 * Marxism Bootcamp
 
