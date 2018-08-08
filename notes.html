@@ -24,14 +24,24 @@
 
 
         <div class="center">
-            <h1>Matthew J. Delhey</h1>
-            <img class="profile" src="img/profile.jpg" />
+            <h1>Notes</h1>
 
-            <p>Matthew is a first-year PhD student in Philosophy at the <a href="http://philosophy.utoronto.ca">University of Toronto</a>. His research interests lie in continental philosophy and political theory (esp. Hegel and Marx), and their intersection with psychoanalysis, digital media studies, and feminism. Matthew's <a href="https://scholarworks.gsu.edu/theses/">master’s thesis</a> explored the issues of machine automation and the possibility of a post-work politics in Hegel’s social theory.</p>
+            <ul>
 
-            <p>Matthew also freelances as a <a href="./stats.html">data scientist</a> and has a technical background in statistics, data science, and machine learning.</p>
+                <li>
+                    <p class="list-title"><a href="inc/stroup-westerns.pdf">John Stroup's Introductionn to Westerns</a></p>
+                    <p class="list-description">A list of films and TV series provided by <a href="https://reli.rice.edu/people/faculty/john-stroup">John Stroup</a>.</p>
+                </li>
 
-            <p>Matthew can be contacted by email at <a href="matt.delhey@gmail.com">matt.delhey@gmail.com</a> and his <i>curriculum vitae</i> can be found <a href="cv">here</a>. He also hosts some of his miscellaneous <a href="./notes.html">notes</a>.
+                <li>
+                    <p class="list-title"><a href="inc/ess-rmarkdown.pdf">Using R Markdown in Emacs</a></p>
+                    <p class="list-description">Quick guide on how to use R Markdown in GNU Emacs, including a function for quick one-key compiling.</p>
+                </li>
+
+
+            </ul>
+
+            <p class="home"><a href="./index.html">home</a></p>
 
         </div>
 
@@ -43,8 +53,10 @@
         <script type="text/javascript">
          $("h1").fitText(1.2, { minFontSize: '38px', maxFontSize: '140px' });
          $("p").fitText(8, { minFontSize: '32px', maxFontSize: '80px' });
+         $("p.list-title").fitText(8, { minFontSize: '32px', maxFontSize: '80px' });
+         $("p.list-description").fitText(8, { minFontSize: '20px', maxFontSize: '40px' });
         </script>
 
-  </body>
+    </body>
 </html>
 

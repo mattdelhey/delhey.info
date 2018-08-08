@@ -20,6 +20,26 @@
     padding: 10px;
 }
 
+.subtitle {
+    padding-top: 0px;
+    margin-top: -50px;
+    font-style: normal;
+}
+
+.list-title {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.list-description {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    paddding-bottom: 0px;
+}
+
 body {
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
@@ -29,7 +49,7 @@ body {
 
 ul, li {
     list-style-type: none;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
     padding-top: 2px;
 }
 
@@ -71,6 +91,10 @@ h1 {
         height: 60%;
         width: 60%;
     }
+
+    .home {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -93,6 +117,10 @@ h1 {
         margin-left: auto;
         height: 60%;
         width: 60%;
+    }
+
+    .home {
+        text-align: center;
     }
 }
 
