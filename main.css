@@ -1,6 +1,7 @@
 .profile {
     position: absolute;
     z-index: -1;
+    z-index: 1;
     /*top: 80px;*/
     right: 80px;
     bottom: 80px;
@@ -17,8 +18,21 @@
     margin: auto;
     width: 95%;
     height: 50%;
-    border: 1px white;
     padding: 10px;
+}
+
+.top {
+    border: 2px solid black;
+    padding-left: 20px;
+}
+
+.middle {
+    padding-top: 0x;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid black;
 }
 
 .subtitle {
@@ -41,6 +55,15 @@
     paddding-bottom: 0px;
 }
 
+.list {
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 body {
     text-align: left;
     font-family: "source Code Pro", "Courier New", Courier, monospace;
@@ -59,6 +82,7 @@ ul, li {
 p {
     padding: 10px;
     margin-right: 35%;
+    z-index: 1;
 }
 
 a {
