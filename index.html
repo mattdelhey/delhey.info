@@ -7,60 +7,57 @@
         <link href="./main.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="FitText.js/jquery.fittext.js"></script>
 
-        <!-- Global site t#+SETUPFILE: ~/mdelhey-org-template/template.orgag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111249008-1"></script>
+
         <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          gtag('config', 'UA-111249008-1');
         </script>
-
     </head>
 
     <body>
-
-
-        <div class="center">
-            <div class="top">
-                <h1>Matthew J. Delhey</h1>
-            </div>
-
-            <div class="right">
-                <img class="profile" src="img/profile.jpg" />
-            </div>
-
-            <div class="middle">
-                <h2>Bio</h2>
-                <p class="small">I am a second-year PhD student in the <a href="http://philosophy.utoronto.ca">Department of Philosophy</a> at the University of Toronto.</p>
-
-                <p class="small">My research interests lie in German Idealism (especially Hegel), Social and Political Philosophy, Continental Philosophy and their intersection with critical theories of the contemporary&mdash;psychoanalytic, digital, queer.</p>
-
-                <p class="small">I completed an MA at Georgia State University in 2018. My <a href="https://scholarworks.gsu.edu/philosophy_theses/248/">thesis</a> explored the issues of abstract labor, machine automation, and post-work politics in Hegel’s <i>Philosophy of Right</i>.</p>
-
-                <p class="small">Prior to graduate school, I worked as a data scientist in Boston and have a background in statistics and machine learning.</p>
-
-                <h2>Contact</h2>
-                <p class="small list"><a href="matt.delhey@mail.utoronto.ca">matt.delhey@mail.utoronto.ca</a></p>
-                <p class="small list"><a href="./cv/Matthew J. Delhey, curriculum vitae.pdf">curriculum vitae</a></p>
-                <p class="small list"><a href="https://utoronto.academia.edu/matthewdelhey">academia.edu</a></p>
-                <p class="small list"><a href="./notes.html">notes</a></p>
-            </div>
-
+        <div class="left">
+            <!-- <a href="http://matthewdelhey.com"><h1 class="name">Matthew J. Delhey</h1></a> -->
+            <h1 class="name">Matthew J. Delhey</h1>
+                <img class="profile" src="./img/profile.jpg" width="100%" />
+            <p>
+                <a href="matt.delhey@mail.utoronto.ca">matt.delhey@mail.utoronto.ca</a>
+                <span class="floatright"><a href="https://utoronto.academia.edu/matthewdelhey">academia.edu</a></span>
+                <br />
+                <a href="https://philosophy.utoronto.ca/directory/matthew-delhey/">Department of Philosophy</a>, University of Toronto
+                <span class="floatright"><a href="https://github.com/mdelhey">github</a></span>
+            </p>
         </div>
 
-        <!--
-             FitText.js Params
-             0.6, 2.8, 4, 4
-             1, 4, 6, 6
-           -->
-        <script type="text/javascript">
-         $("h1").fitText(1.2, { minFontSize: '38px', maxFontSize: '140px' });
-         $("p.large").fitText(8, { minFontSize: '28px', maxFontSize: '80px' });
-         $("p.small").fitText(8, { minFontSize: '20px', maxFontSize: '80px' });
-        </script>
+        <div class="right">
+            <h2>Biography</h2>
+
+            <a href="./cv/Matthew J. Delhey, curriculum vitae.pdf"><h3>Curriculum Vitae</h3></a>
+
+            <p>I am a second-year PhD student in the <a href="http://philosophy.utoronto.ca">Department of Philosophy</a> at the University of Toronto.</p>
+
+            <p>My research interests lie in German Idealism (especially Hegel), Social and Political Philosophy, Continental Philosophy and the intersection of philosophy with critical theories of the contemporary&mdash;psychoanalytic, digital, queer.</p>
+
+            <p>I earned a Master of Arts in philosophy at Georgia State University in 2018. My <a href="https://scholarworks.gsu.edu/philosophy_theses/248/">thesis</a> explored the issues of abstract labor, machine automation, and post-work politics in Hegel’s <i>Philosophy of Right</i>.</p>
+
+            <p>Prior to graduate school, I worked as a data scientist in Boston, MA and have a background in statistics and machine learning.</p>
+
+            <h2>Works in Progress</h2>
+            <ul>
+                <li>The Priority of Reciprocity: The Development of the Categories in Schelling's <i>System of Transcendental Idealism</i>. <a href="welp">PDF</a> </li>
+            </ul>
+
+            <h2>Notes</h2>
+            <ul>
+                <li>Using R Markdown in Emacs (including a function for quick one-key compiling). <a href="./inc/ess-rmarkdown.pdf">PDF</a></li>
+                <li>Introduction to Westerns: A list of films and TV series compiled by John Stroup. <a href="./inc/stroup-westerns.pdf">PDF</a></li>
+            </ul>
+        </div>
+
 
     </body>
 </html>
