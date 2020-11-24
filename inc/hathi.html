@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-11-23 Mon 23:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HathiTrust</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Matthew J. Delhey" />
+<link rel="stylesheet" type="text/css" href="../main.css" />
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">HathiTrust</h1>
+<p>
+You may have access to the <a href="https://babel.hathitrust.org/">HathiTrust</a> library through your university. If so, you can download books from it with a bit of work. HathiTrust provides access to lots of books unavailable on libgen and other places, so it&rsquo;s worth having this trick in your back pocket, just in case.<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<p>
+You&rsquo;ll need to install: FireFox with the DownThemAll extension, img2pdf, and ocrmypdf. I&rsquo;m assuming you&rsquo;re on osx, but this should work on linux and, <i>mutatis mutandis</i>, on windows, too.
+</p>
+
+<div id="outline-container-orgd6470e8" class="outline-2">
+<h2 id="orgd6470e8">1. Download raw pages from HathiTrust.</h2>
+<div class="outline-text-2" id="text-orgd6470e8">
+<p>
+Using FireFox, access <a href="https://babel.hathitrust.org/cgi/wayf?target=https%3A%2F%2Fbabel.hathitrust.org%2Fcgi%2Fpt%3Fid%3Duc1.b4362598%3Bview%3D1up%3Bseq%3D428">HathiTrust</a> using your instiutitonal login. 
+</p>
+
+<p>
+Search for your book and check it out.
+</p>
+
+<p>
+Right click on the book and click &ldquo;Copy Image Location.&rdquo;
+</p>
+
+<p>
+Now click on the DownThemAll button, and select &ldquo;Manager.&rdquo;
+</p>
+
+<p>
+Paste into the &ldquo;Download&rdquo; box. You&rsquo;ll have something that looks like this.
+</p>
+<pre class="example">
+  https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.b4362598;seq=107;size=150;rotation=0
+</pre>
+
+<p>
+This link corresponds only to one page. To download the entire book, we&rsquo;ll need to make DownThemAll download the whole sequence using the brackets notation. We can also request an arbitrary image size using &ldquo;width&rdquo; or &ldquo;size.&rdquo; 
+</p>
+<pre class="example">
+  https://babel.hathitrust.org/cgi/imgsrv/image?id=uc1.b4362598;seq=[1:464];width=2000
+</pre>
+
+<p>
+The defaults for DownThemAll work fine. I like to set a custom subfolder for the project. Click &ldquo;Download,&rdquo; then &ldquo;Batch Download.&rdquo;
+</p>
+
+<p>
+DownThemAll should begin working its magic. HathiTrust limits the number of viewable images for a certain time period, returning a server error. So if you&rsquo;re downloading a bunch of pages, you&rsquo;ll want to modify the network preferences. Click on DownThemAll, &ldquo;Preferences,&rdquo; then &ldquo;Network.&rdquo; Here&rsquo;s what I use. 
+</p>
+<pre class="example">
+  Concurrent downloads: 1
+  Number of retries of downloads on temporary errors: 99
+  Retry every (in minutes): 2
+</pre>
+
+<p>
+You may need to step away for a couple of hours while DownThemAll gets through all the pages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4152941" class="outline-2">
+<h2 id="org4152941">2. Merge raw pages, ocr them.</h2>
+<div class="outline-text-2" id="text-org4152941">
+<p>
+You should now have all of your images in a single directory on your computer. Using your command line, navigate to that directory.
+</p>
+<pre class="example">
+  cd ~/Downloads/example_book/
+</pre>
+
+<p>
+Use <a href="https://github.com/josch/img2pdf">img2pdf</a> since it&rsquo;s always lossless. We need to sort the images correctly. They also come in a combination of jpg and png, in my experience. So this one-liner does the trick.
+</p>
+<pre class="example">
+  img2pdf --fit shrink --output out.pdf $(ls *.{jpg,png}|sort -V)
+</pre>
+
+<p>
+Now OCR this pdf with your preferred method. The simplist one is likely <a href="https://github.com/jbarlow83/OCRmyPDF">ocrmypdf</a>. A good alternative is <a href="https://pdf.abbyy.com">FineReader</a>. This may take awhile. 
+</p>
+<pre class="example">
+  ocrmypdf out.pdf out_ocr.pdf
+</pre>
+
+<p>
+You&rsquo;ve now got a nice pdf of your book, DRM free. 
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+This method is mostly taken from <a href="https://en.wikisource.org/wiki/User:Mukkakukaku/Guide">Mukkakukaku&rsquo;s guide</a>. But see this <a href="https://sourceforge.net/p/hathidownloadhelper/tickets/24/">ticket</a> for HathiDownloadHelper and this <a href="https://github.com/Addono/HathiTrust-downloader">issue</a> for HathiTrust-downloader. 
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<br /><hr style='width:400px;text-align:left;margin-left:0'><p>This page was created using <a href='https://www.gnu.org/software/emacs/'>GNU Emacs</a> and <a href='https://orgmode.org'>org-mode</a>.<br />Matthew J. Delhey (<a href="mailto:matt.delhey@mail.utoronto.ca">matt.delhey@mail.utoronto.ca</a>)</p>
+</div>
+</body>
+</html>
