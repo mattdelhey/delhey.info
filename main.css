@@ -21,6 +21,10 @@ ul {
     padding-left: 0;
 }
 
+pre {
+    display: inline;
+}
+
 .name {
     font-size: 40px;
 }
