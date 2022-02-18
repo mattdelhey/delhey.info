@@ -21,6 +21,11 @@ ul {
     padding-left: 0;
 }
 
+ul .blog {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 pre {
     display: inline;
 }
