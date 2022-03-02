@@ -37,16 +37,16 @@ pre {
 .left {
     float: left;
     /* width: 42%; */
-    width: 38%;
-    padding-left: 4%;
+    width: 41%;
+    padding-left: 1%;
 }
 
 .right {
     float: right;
     /* width: 55%; */
     height: 150%;
-    width: 51%;
-    padding-right: 4%;
+    width: 54%;
+    padding-right: 1%;
 }
 
 a:link {
@@ -80,7 +80,7 @@ a:active {
 }
 
 /* Mobile: (767px) */
-@media only screen and (max-device-width: 1000px) {
+@media only screen and (max-device-width: 900px) {
     .left {
     /* padding-left: 0; */
 }
@@ -90,7 +90,7 @@ a:active {
 }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
     .left {
         float: left;
         width: 100%;
