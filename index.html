@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- TODO: In mobile mode, make navigation bar full screen-width for each category.  -->
 <html>
     <head>
         <meta charset="utf-8">
@@ -27,7 +28,7 @@
     <body>
         <div class="left">
             <!--  <a href="http://matthewdelhey.com"><h1 class="name">Matthew J. Delhey</h1></a> -->
-            <h1 class="name">Matthew J. Delhey</h1>
+            <h1 class="name"><a href="https://matthewdelhey.com">Matthew J. Delhey</a></h1>
 
                 <img class="profile" src="./img/profile.jpg" width="100%" />
                 <p class="below-profile">
@@ -44,44 +45,101 @@
         </div>
 
         <div class="right">
-            <h1 class="name">&nbsp;</h1>
+            <!-- <h1 class="name">&nbsp;</h1>-->
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="bio" checked>
+                <label for="tab1"><h3>Bio</h3></label>
 
-            <h2>Biography</h2>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="research">
+                <label for="tab2"><h3>Research</h3></label>
 
-            <p>Hi, I'm a PhD candidate in the Department of Philosophy at the University of Toronto. I'm currently writing a dissertation entitled <i>Hegel's Theory of Institutions</i>.</p>
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="teaching">
+                <label for="tab3"><h3>Teaching</h3></label>
 
-            <p>My research deals with Hegel and German idealism, social and political philosophy, and critical social theory. In particular, I'm interested in the interaction of dialectics, broadly construed, with political economy, digital theory, and critical theories of race, class, and labor. And Marx.</p>
+                <!-- Tab 4 -->
+                <input type="radio" name="tabset" id="tab4" aria-controls="media">
+                <label for="tab4"><h3>Media</h3></label>
 
-            <p>I completed a master's degree in philosophy at Georgia State University in 2018. You can check out my thesis <a href="https://scholarworks.gsu.edu/philosophy_theses/248/">here</a>. It explores the concepts of education, abstract labor, and machine automation in Hegel’s <i>Philosophy of Right</i>, recovering resources for post-work politics.</p>
+                <!-- Tab 5 -->
+                <input type="radio" name="tabset" id="tab5" aria-controls="miscellanea">
+                <label for="tab5"><h3>Miscellanea</h3></label>
 
-            <p>Prior to graduate school, I worked as data scientist in Boston and studied statistics and machine learning.</p>
+                <div class="tab-panels">
 
-            <h2>Teaching</h2>
-            <ul>
-                <li>PHL210: <em>17th-and 18th-Century Philosophy</em> (University of Toronto, St. George). <a href="./inc/delhey-syllabus-210.pdf">pdf</a></li>
-                <li>PHL243: <em>Philosophy of Human Sexuality</em> (University of Toronto, Mississauga). <a href="./inc/delhey-syllabus-243.pdf">pdf</a></li>
-            </ul>
+                    <!-- Tab 1: Bio -->
+                    <section id="bio" class="tab-panel">
+                        <h2></h2>
 
-            <p>I've also served as a teaching assistant for several courses. Most recently: Pantheism and German Idealism (Nick Stang); Introduction to Political Philosophy (Arthur Ripstein).</p>
+                    <p>Hi, I'm a PhD candidate in the Department of Philosophy at the University of Toronto. I'm currently writing a dissertation entitled <i>Hegel's Theory of Institutions</i>.</p>
 
-            <h2>Papers in progress</h2>
-            <ul>
-                <li>Hegel's critique of abstract labor. <a href="./inc/delhey-paper-labor.pdf">pdf</a> </li>
-                <li>The priority of reciprocity: The development of the categories in Schelling's <i>System of Transcendental Idealism</i>. <a href="./inc/delhey-paper-schelling.pdf">pdf</a> </li>
-            </ul>
+                    <p>My research deals with Hegel and German idealism, social and political philosophy, and critical social theory. In particular, I'm interested in the interaction of dialectics, broadly construed, with political economy, digital theory, and critical theories of race, class, and labor. And Marx.</p>
 
-            <h2>Miscellanea</h2>
-            <ul>
-                <li>Hegel links. <a href="inc/hegel-links.html">html</a></li>
-                <li>Dialectics reading group. <a href="https://www.dialecticsreadinggroup.com">html</a></li>
-                <li>Dramaturgies of resistance. <a href="http://dramaturgiesofresistance.com">html</a></li>
-                <!--<li>Notes on writing and process. <a href="https://blog.matthewdelhey.com">html</li>-->
-                <!-- <li>Using R markdown in emacs. <a href="./inc/ess-rmarkdown.pdf">pdf</a></li> -->
-                <!-- <li>Introduction to Westerns: A List. <a href="./inc/stroup-westerns.pdf">pdf</a></li> -->
-            </ul>
+                    <p>I completed a master's degree in philosophy at Georgia State University in 2018. You can check out my thesis <a href="https://scholarworks.gsu.edu/philosophy_theses/248/">here</a>. It explores the concepts of education, abstract labor, and machine automation in Hegel’s <i>Philosophy of Right</i>, recovering resources for post-work politics.</p>
+
+                    <p>Prior to graduate school, I worked as data scientist in Boston and studied statistics and machine learning.</p>
+                    </section>
+
+                    <!-- Tab 2: Research -->
+                    <section id="research" class="tab-panel">
+                        <h2>Publications</h2>
+                        <ul>
+                            <li>Hölderlin's Politics of the New Mythology. <i>Journal of Speculative Philosophy</i> 37, no. 3 (2023), <i>forthcoming</i>. <a href="">pdf</a></li>
+                            <li>Review of Caleb J. Basnett, <i>Adorno, Politics, and the Aesthetic Animal</i>. <i>Phenomenological Reviews</i> (5/2022). <a href="https://reviews.ophen.org/2022/05/02/caleb-basnett-adorno-politics-aesthetic-animal/">html</a></li>
+                        </ul>
+                        <h2>Under Review</h2>
+                        <ul>
+                            <li>Hegel and Fichte on Institutional Content. <a href="./inc/delhey-hegel-and-fichte-on-institutional-content.pdf">pdf</a></li>
+                        </ul>
+
+                        <h2>In Progress</h2>
+                        <ul>
+                            <li>Hegel's critique of abstract labor. <a href="./inc/delhey-paper-labor.pdf">pdf</a> </li>
+                            <li>The priority of reciprocity: The development of the categories in Schelling's <i>System of Transcendental Idealism</i>. <a href="./inc/delhey-paper-schelling.pdf">pdf</a> </li>
+                        </ul>
+                    </section>
+
+                    <!-- Tab 3: Teaching -->
+                    <section id="teaching" class="tab-panel">
+                        <h2>Pedagogy</h2>
+
+                        <p>Welp.</p>
+
+                        <h2>Syllabi</h2>
+                        <ul>
+                            <li>PHL210: <em>17th-and 18th-Century Philosophy</em> (2022, University of Toronto, St. George). <a href="./inc/delhey-syllabus-210.pdf">pdf</a></li>
+                            <li>PHL243: <em>Philosophy of Human Sexuality</em> (2021, University of Toronto, Mississauga). <a href="./inc/delhey-syllabus-243.pdf">pdf</a></li>
+                        </ul>
+
+                        <p>I've also served as a teaching assistant for several courses. Most recently: Pantheism and German Idealism (Nick Stang); Introduction to Political Philosophy (Arthur Ripstein).</p>
+                    </section>
+
+                    <!-- Tab 4: Media -->
+                    <section id="miscellanea" class="tab-panel">
+                        <h2>Videos</h2>
+                        <ul>
+                            <li>Test. <a href="">x</a></li>
+                        </ul>
+                    </section>
+
+
+                    <!-- Tab 5: Miscellanea -->
+                    <section id="miscellanea" class="tab-panel">
+                        <h2>Miscellanea</h2>
+                        <ul>
+                            <li>Hegel links. <a href="inc/hegel-links.html">html</a></li>
+                            <li>Dialectics reading group. <a href="https://www.dialecticsreadinggroup.com">html</a></li>
+                            <li>Dramaturgies of resistance. <a href="http://dramaturgiesofresistance.com">html</a></li>
+                            <!--<li>Notes on writing and process. <a href="https://blog.matthewdelhey.com">html</li>-->
+                            <!-- <li>Using R markdown in emacs. <a href="./inc/ess-rmarkdown.pdf">pdf</a></li> -->
+                            <!-- <li>Introduction to Westerns: A List. <a href="./inc/stroup-westerns.pdf">pdf</a></li> -->
+                        </ul>
+                    </section>
+                </div>
+            </div>
         </div>
-
-
     </body>
 </html>
 
