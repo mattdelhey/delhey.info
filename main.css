@@ -348,15 +348,15 @@ a.post:link {
   border: 0;
 }
 
-/*
- Demo purposes only
-*/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+/* /\* */
+/*  Demo purposes only */
+/* *\/ */
+/* *, */
+/* *:before, */
+/* *:after { */
+/*   box-sizing: border-box; */
+/* } */
 
-.tabset {
-  /* max-width: 65em; */
-}
+/* .tabset { */
+/*   /\* max-width: 65em; *\/ */
+/* } */
