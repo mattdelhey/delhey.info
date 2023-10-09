@@ -58,18 +58,23 @@ li.post {
 }
 
 .left {
-    float: left;
-    /* width: 42%; */
-    width: 41%;
-    padding-left: 1%;
+  float: left;
+  /* width: 42%; */
+  /* width: 41%; */
+  width: 35%;
+  padding-left: 1%;
+  /* min-width: 450px; */
+  max-width: 500px;
 }
 
 .right {
     float: right;
     /* width: 55%; */
     height: 150%;
-    width: 54%;
+  /* width: 54% */
+    width: 60%;
     padding-right: 1%;
+    max-width:
 }
 
 a:link {
@@ -286,7 +291,7 @@ a.post:link {
 }
 
 /*
- CSS Tabs (https://codepen.io/markcaron/pen/MvGRYV)
+ "Pure CSS Tabs" (https://codepen.io/markcaron/pen/MvGRYV)
 */
 
 .tabset > label {
