@@ -1,7 +1,7 @@
 /* https://clrs.cc */
 
 body {
-  min-width:
+  min-width: 781px;
   padding: 35px;
   /* font-size: 17px; */
   font-size: 19px;
@@ -55,10 +55,6 @@ li.post {
     font-size: 34px;
 }
 
-.name-tab {
-  cursor: help; !important
-}
-
 .name a:link, a:hover, a:visited, a:active {
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -72,14 +68,16 @@ li.post {
   /* width: 375px; */
   width: 35%;
   /* min-width: 375px; */
-  max-width: 500px;
+  max-width: 400px;
   /* padding-left: 1%; */
   /* min-width: 450px; */
   /* padding-right: 0px; */
 }
 
 .right {
-    float: right;
+  max-width: 1000px;
+  float: left;
+  margin-left: 25px;
     /* width: 55%; */
     /* height: 150%; */
   /* width: 54% */
