@@ -16,138 +16,249 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111249008-1"></script>
         <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-         gtag('config', 'UA-111249008-1');
+            gtag('config', 'UA-111249008-1');
         </script>
 
-        <link href="./main.css" rel="stylesheet" type="text/css">
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="tufte.css" rel="stylesheet"/>
 
         <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     </head>
 
     <body>
-        <div class="left">
-            <!--  <a href="http://matthewdelhey.com"><h1 class="name">Matthew J. Delhey</h1></a> -->
-            <h1 class="name"><a href="https://matthewdelhey.com">Matthew J. Delhey</a></h1>
+        <!-- <h1 class="name"><a href="https://matthewdelhey.com" class="no-tufte-underline">Matthew J. Delhey</a></h1> -->
 
-                <img class="profile" src="./img/profile.jpg" width="100%" />
-                <p class="below-profile">
-                    Department of Philosophy, University of Toronto
-                    <span class="floatright">
-                    </span>
-                    <br />
-                    <a href="mailto:matt.delhey@mail.utoronto.ca">matt.delhey@mail.utoronto.ca</a>
-                    <span class="floatright">
 
-                    </span>
-            </p>
-        </div>
-
-        <div class="right">
-            <!-- <h1 class="name">&nbsp;</h1>-->
+        <div>
             <div class="tabset">
+                <input type="hidden" name="tabset" id="tab0" aria-controls="bio">
+                <label for="tab0" class="name-tab" style="cursor: default; margin-right: 2%;"><h1 class="name name-tab"><a href="https://matthewdelhey.com" class="no-tufte-underline">Matthew J. Delhey</a></h1></label>
+
                 <!-- Tab 1 -->
                 <input type="radio" name="tabset" id="tab1" aria-controls="bio" checked>
-                <label for="tab1"><h3>Bio</h3></label>
+                <label for="tab1" ><h3 style="font-size: 22px;">Home</h3></label>
+
+                                <!-- Tab 1 -->
+                <!-- <input type="radio" name="tabset" id="tab1" aria-controls="bio" checked> -->
+                <!-- <label for="tab1"><h3 style="font-size: 22px;">CV</h3></label> -->
 
                 <!-- Tab 2 -->
                 <input type="radio" name="tabset" id="tab2" aria-controls="research">
-                <label for="tab2"><h3>Research</h3></label>
+                <label for="tab2" ><h3 style="font-size: 22px;">Research</h3></label>
 
                 <!-- Tab 3 -->
                 <input type="radio" name="tabset" id="tab3" aria-controls="teaching">
-                <label for="tab3"><h3>Teaching</h3></label>
+                <label for="tab3" ><h3 style="font-size: 22px;">Teaching</h3></label>
 
                 <!-- Tab 4 -->
                 <input type="radio" name="tabset" id="tab4" aria-controls="media">
-                <label for="tab4"><h3>Media</h3></label>
+                <label for="tab4" ><h3 style="font-size: 22px;">Media</h3></label>
 
                 <!-- Tab 5 -->
                 <input type="radio" name="tabset" id="tab5" aria-controls="miscellanea">
-                <label for="tab5"><h3>Miscellanea</h3></label>
+                <label for="tab5" ><h3 style="font-size: 22px;">Miscellanea</h3></label>
+
+                <!-- <\!-- Tab 1 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab1" aria-controls="bio" checked> -->
+                <!-- <label for="tab1" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">CV</h3></label> -->
+
+                <!-- <\!-- Tab 1 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab1" aria-controls="bio" checked> -->
+                <!-- <label for="tab1" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">Bio</h3></label> -->
+
+                <!-- <\!-- Tab 2 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab2" aria-controls="research"> -->
+                <!-- <label for="tab2" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">Research</h3></label> -->
+
+                <!-- <\!-- Tab 3 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab3" aria-controls="teaching"> -->
+                <!-- <label for="tab3" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">Teaching</h3></label> -->
+
+                <!-- <\!-- Tab 4 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab4" aria-controls="media"> -->
+                <!-- <label for="tab4" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">Media</h3></label> -->
+
+                <!-- <\!-- Tab 5 -\-> -->
+                <!-- <input type="radio" name="tabset" id="tab5" aria-controls="miscellanea"> -->
+                <!-- <label for="tab5" style="float: right; margin-top: 38px;"><h3 style="font-size: 22px;">Miscellanea</h3></label> -->
 
                 <div class="tab-panels">
 
+                    <section id="tab0" class="tab-panel">
+                    </section>
+
                     <!-- Tab 1: Bio -->
                     <section id="bio" class="tab-panel">
-                        <h1></h1>
 
-                        <p>I am a PhD candidate in the Department of Philosophy at the University of Toronto, where I am completing a dissertation on Hegel's theory of institutions.</p>
+                        <div class="left">
+                            <h2></h2>
+                            <img class="profile" src="./img/profile.jpg" width="375px" />
+                            <p class="below-profile">
+                                PhD Candidate, Philosophy, University of Toronto
+                                <br />
+                                <a href="mailto:matt.delhey@mail.utoronto.ca">matt.delhey@mail.utoronto.ca</a>
+                                <span class="floatright">
+                                </span>
+                            </p>
+                        </div>
 
-                        <p>My research concerns Hegel and German idealism, social and political philosophy, and critical social theory. Systematically, I am interested in institutional theory, theories of recognition, and critical theories of race, gender, labor, and technology. Historically, my work centers on the social philosophy of Hobbes, Fichte, Hegel, and Marx.</p>
+                        <div class="right">
+                            <h2></h2>
+                            <p class="fullwidth">I am a PhD candidate in the Department of Philosophy at the University of Toronto, where I am completing a dissertation on Hegel's theory of institutions.</p>
+                            <p class="fullwidth">My research focuses Hegel and German idealism, social and political philosophy, and critical social theory. Systematically, I am interested in institutional theories, theories of recognition, and critical theories of race, gender, labor, and technology. Historically, my work centers on the social philosophy of Hobbes, Fichte, Hegel, and Marx.</p>
+                            <p class="fullwidth">Before graduate school, I worked as a data scientist and studied statistics and machine learning.</p>
+                            <!-- <p class="fullwidth">My CV can be found <a href="./cv">here</a>.</p> -->
 
-                        <p>Before starting graduate school, I worked as a data scientist after having studied statistics and machine learning.</p>
-
+                            <br />
                     </section>
 
                     <!-- Tab 2: Research -->
                     <section id="research" class="tab-panel">
                         <h2>Publications</h2>
                         <ul>
-                            <li>Hölderlin's Politics of the New Mythology. <i>Journal of Speculative Philosophy</i> 37, no. 3 (2023): 369&#8212;80. <a href="https://muse.jhu.edu/article/904121">html</a></li>
-                            <li>Review of Caleb J. Basnett, <i>Adorno, Politics, and the Aesthetic Animal</i>. <i>Phenomenological Reviews</i> (5/2022). <a href="https://reviews.ophen.org/2022/05/02/caleb-basnett-adorno-politics-aesthetic-animal/">html</a></li>
+                            <li>
+                                <label for="hölderlin-politics" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="hölderlin-politics" class="margin-toggle" />
+                                <span class="marginnote">
+                                    Available on <a href="https://muse.jhu.edu/article/904121">Project Muse</a>, <a href="https://doi.org/10.5325/jspecphil.37.3.0369">Scholarly Publishing Collective</a>, <a href="https://www.academia.edu/104943927/H%C3%B6lderlin_s_Politics_of_the_New_Mythology?source=swp_share">Academia.edu</a>
+                                </span>
+                                Hölderlin's Politics of the New Mythology. <i>Journal of Speculative Philosophy</i> 37, no. 3 (2023): 369&#8211;80.
+                            </li>
+                            <li>
+                                <label for="basnett-adorno" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="basnett-adorno" class="margin-toggle"/>
+                                <span class="marginnote">
+                                    Available on <a href="https://reviews.ophen.org/2022/05/02/caleb-basnett-adorno-politics-aesthetic-animal/">Phenomenological Reviews</a>
+                                </span>
+                                Review of Caleb J. Basnett, <i>Adorno, Politics, and the Aesthetic Animal</i>. <i>Phenomenological Reviews</i> (5/2022).
+                            </li>
                         </ul>
                         <h2>Under Review</h2>
                         <ul>
                             <li>The Liberal Subject in Hobbes's <i>Leviathan</i>.</li>
-                            <li>Hegel and Fichte on Institutional Content. <a href="./inc/delhey-institutional-content.pdf">pdf</a></li>
+                            <li>Hegel and Fichte on Institutional Content.
+                                <!-- <a href="./inc/delhey-institutional-content.pdf">pdf</a></li> -->
                         </ul>
-
                         <!-- <h2>In Progress</h2>
                              <ul>
-                             <li>Hegel's critique of abstract labor. <a href="./inc/delhey-paper-labor.pdf">pdf</a> </li>
-                             <li>The priority of reciprocity: The development of the categories in Schelling's <i>System of Transcendental Idealism</i>. <a href="./inc/delhey-paper-schelling.pdf">pdf</a> </li>
+                                 <li>Hegel's critique of abstract labor. <a href="./inc/delhey-paper-labor.pdf">pdf</a> </li>
+                                 <li>The priority of reciprocity: The development of the categories in Schelling's <i>System of Transcendental Idealism</i>. <a href="./inc/delhey-paper-schelling.pdf">pdf</a> </li>
                              </ul> -->
                     </section>
 
+
                     <!-- Tab 3: Teaching -->
                     <section id="teaching" class="tab-panel">
-                    <h2>Pedagogy</h2>
+                        <h2>Pedagogy</h2>
 
-                    <p>My pedagogy centers on the practice of writing. In my courses, this is supported by regular, low-stakes writing assignments, scaffolded assignments, in-class writing exercises, and metacognitive reflections on writing practice. For more information, see the sample syllabi below.</p>
+                        <p class="fullwidth">My pedagogy centers on the practice of writing. In my courses, this is supported by regular, low-stakes writing assignments, scaffolded assignments, in-class writing exercises, and metacognitive reflections on writing practice. For more information, see the sample syllabi below.</p>
 
                         <h2>Syllabi</h2>
                         <ul>
-                            <li>PHL322: <em>Contemporary Continental Philosophy</em> (2023, University of Toronto, St. George). <a href="./inc/delhey-syllabus-322.pdf">pdf</a></li>
-                            <li>PHL210: <em>17th-and 18th-Century Philosophy</em> (2022, University of Toronto, St. George). <a href="./inc/delhey-syllabus-210.pdf">pdf</a></li>
-                            <li>PHL243: <em>Philosophy of Human Sexuality</em> (2021, University of Toronto, Mississauga). <a href="./inc/delhey-syllabus-243.pdf">pdf</a></li>
+                            <li>
+                                <label for="phl322" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="phl322" class="margin-toggle"/>
+                                <span class="marginnote">
+                                    <a href="./inc/delhey-syllabus-322.pdf">Summer 2023 syllabus</a>, University of Toronto, St. George.
+                                </span>
+                                PHL322: <em>Contemporary Continental Philosophy</em>. Topic: Social Critique.
+                            </li>
+                            <li>
+                                <label for="phl210" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="phl210" class="margin-toggle"/>
+                                <span class="marginnote">
+                                    <a href="./inc/delhey-syllabus-210.pdf">Summer 2022 syllabus</a>, University of Toronto, St. George.
+                                </span>
+                                PHL210: <em>17th-and 18th-Century Philosophy</em>.
+                            </li>
+                            <li>
+                                <label for="phl243" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="phl243" class="margin-toggle"/>
+                                <span class="marginnote">
+                                 <a href="./inc/delhey-syllabus-243.pdf">Summer 2021 syllabus</a>, University of Toronto, Mississauga.
+                                 </span>
+                                PHL243: <em>Philosophy of Human Sexuality</em>.
+                            </li>
                         </ul>
-
-                        <p>I've also served as a teaching assistant for several courses. Most recently: Pantheism and German Idealism (Nick Stang); Introduction to Political Philosophy (Arthur Ripstein).</p>
+                        <br />
+                        <p class="fullwidth">I've also served as a teaching assistant for several courses. Most recently: <em>Pantheism and German Idealism</em> (Nick Stang); <em>Introduction to Political Philosophy</em> (Arthur Ripstein).</p>
                     </section>
 
                     <!-- Tab 4: Media -->
                     <section id="miscellanea" class="tab-panel">
-                        <h2>Talks</h2>
+                        <h2>Recent Talks</h2>
                         <ul>
-                            <li>Institutions or Interaction? Hegel's Critique on Fichte Reconsidered. (11/2022) <a href="https://youtu.be/Y14PupoDVIc">youtube</a></li>
+                            <li>
+                                <label for="institutions-or-interaction" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="institutions-or-interaction" class="margin-toggle" />
+                                <span class="marginnote">
+                                    Handout available <a href="./inc/delhey-handout-hegel-apriorism.pdf">here</a>.
+                                </span>
+                                Apriorism and Scientific Cooperation in Hegel.
+                                <p class="linotes-md">International Hegel-Vereinigung, "The Self-Conception of Philosophy and its Relationship to the (Other) Sciences," Stuttgart, Germany (6/2023)</p>
+                            </li>
+                            <li>
+                                <label for="institutions-or-interaction" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="institutions-or-interaction" class="margin-toggle"/>
+                                <span class="marginnote">
+                                    Video available on <a href="https://youtu.be/Y14PupoDVIc">youtube</a>. Slides available <a href="./inc/delhey-handout-hegel-apriorism.pdf">here</a>.
+                                </span>
+                                Institutions or Interaction? Hegel's Critique on Fichte Reconsidered.
+                                <p class="linotes-md">Association of Philosophy Students, University of Toronto, Scarborough (10/2022)</p>
+                            </li>
                         </ul>
                         <h2>Interviews</h2>
                         <ul>
-                            <li>APA Member Interview. (3/2022) <a href="https://blog.apaonline.org/2022/03/04/apa-member-interview-matthew-j-delhey/">html</a>
+                            <li>
+                                <label for="apa-interview" class="margin-toggle">&#8853;</label>
+                                <input type="checkbox" id="apa-interview" class="margin-toggle"/>
+                                <span class="marginnote">
+                                    Available on the <a href="https://blog.apaonline.org/2022/03/04/apa-member-interview-matthew-j-delhey/">Blog of the APA</a>.
+                                </span>
+                                APA Member Interview.
+                                <p class="linotes-md">Association of Philosophy Students, University of Toronto, Scarborough (3/2022)</p>
+                            </li>
                         </ul>
                     </section>
-
 
                     <!-- Tab 5: Miscellanea -->
                     <section id="miscellanea" class="tab-panel">
                         <h2>Miscellanea</h2>
-                        <ul>
-                            <li>Hegel links. <a href="inc/hegel-links.html">html</a></li>
-                            <li>Dialectics reading group. <a href="https://www.dialecticsreadinggroup.com">html</a></li>
-                            <li>Dramaturgies of resistance. <a href="http://dramaturgiesofresistance.com">html</a></li>
+                        <ul class="fullwidth">
+                            <li>
+                                <a href="inc/hegel-links.html">Hegel Links</a>.
+                                <p class="linotes-md">
+                                    A collection of links that I have found helpful for thinking and writing about Hegel.
+                                </p>
+                            </li>
+                            <!-- <li>Dialectics reading group. <a href="https://www.dialecticsreadinggroup.com">html</a></li> -->
+                            <li>
+                                <a href="http://dramaturgiesofresistance.com">Dramaturgies of Resistance</a>.
+                                <p class="linotes-md">
+                                    An event series I co-organized with colleagues in Cinema Studies, Comparative Literature, and Philosophy funded by the Jackman Humanities Institute's Program in the Arts. The series ran for two discontinuous years: <em>Collectivity, Performance, Dialectics</em> (2020&ndash;21) and <em>The Labour of the Negative</em> (2022&ndash;23).
+                                </p>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/spreadsheets/d/1ieNFgsMoR5nvWR4UqvQLgvU8QJTXdQTCnbWArhEWvOs/edit?usp=sharing">Marx & Critique Reading Group.</a>
+                                <p class="linotes-md">A reading group started during the COVID-19 pandemic. We've read, inter alia, the <em>Grundrisse</em>, Volume 1, and Volume 2. From contemporary authors, we've read <em>Black Marxism</em> (Cedric Robinson), <em>The Warehouse</em> (Alessandro Delfanti), and <em>Marx and Critical Theory</em> (Emmanuel Renault), the latter two having joined the reading group for discussion of their work. We're currently reading Volume 3.
+
+                            </li>
                             <!--<li>Notes on writing and process. <a href="https://blog.matthewdelhey.com">html</li>-->
                             <!-- <li>Using R markdown in emacs. <a href="./inc/ess-rmarkdown.pdf">pdf</a></li> -->
                             <!-- <li>Introduction to Westerns: A List. <a href="./inc/stroup-westerns.pdf">pdf</a></li> -->
                         </ul>
+
+                        <!-- <h2>Blog</h2>
+                             <p>I occassionally blog.</p> -->
                     </section>
+
+                    </div>
                 </div>
             </div>
-        </div>
     </body>
 </html>
-
