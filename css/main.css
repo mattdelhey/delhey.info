@@ -17,6 +17,10 @@ body {
   /* font-family: Cento, sans-serif; BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
 }
 
+.h-nav {
+  font-size: 20px;
+}
+
 h3 {
   font-size: 1em;
 }
@@ -282,108 +286,3 @@ a.post:link {
 }
 
 
-/*
- "Pure CSS Tabs" (https://codepen.io/markcaron/pen/MvGRYV)
-*/
-.tabset > input[type="radio"] {
-  position: absolute;
-  left: -200vw;
-}
-
-.tabset .tab-panel {
-  display: none;
-}
-
-.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-  display: block;
-}
-
-
-.tabset > label {
-  position: relative;
-  display: inline-block;
-  /* padding: 15px 15px 25px; */
-  padding-left: 0px;
-  padding-top: 14px;
-  padding-bottom: 0px;
-  padding-right: 2.5%;
-  padding-right: 2%;
-  /* border: 1px solid transparent; */
-  border: 0px solid transparent;
-  /* border-bottom: 1px solid transparent; */
-  border-bottom: 0px solid transparent;
-  cursor: pointer;
-  /* font-weight: 600; */
-  /* font-size: 26px; */
-  /* text-align: left; */
-  /* width: 150px; */
-  /* width: 19%; */
-  /* min-width: 80px; */
-}
-
-.tabset > label::after {
-  content: "";
-  position: absolute;
-  /* left: 15px; */
-  left: 0px;
-  bottom: 10px;
-  /* width: 22px; */
-  width: 0px;
-  height: 4px;
-  background: #8d8d8d;
-  /* background: #001f3f; */
-}
-
-input:focus-visible + label {
-  outline: 2px solid rgba(0,102,204,1);
-  border-radius: 3px;
-}
-
-.tabset > label:hover,
-.tabset > input:focus + label,
-.tabset > input:checked + label {
-  color: #003c7a;
-}
-
-.tabset > label:hover::after,
-.tabset > input:focus + label::after,
-.tabset > input:checked + label::after {
-  background: #003c7a;
-  /* width: 90%; */
-}
-
-.tabset > input:checked + label {
-  border-color: #ccc;
-  border-bottom: 1px solid #fff;
-  margin-bottom: -1px;
-}
-
-.tab-panel {
-  /* padding: 30px 0; */
-  padding: 0px 0;
-  border-top: 1px solid #ccc;
-  border: 0;
-}
-
-
-.h-nav {
-  font-size: 20px;
-}
-
-/* /\* */
-/*  Demo purposes only */
-/* *\/ */
-/* *, */
-/* *:before, */
-/* *:after { */
-/*   box-sizing: border-box; */
-/* } */
-
-/* .tabset { */
-/*   /\* max-width: 65em; *\/ */
-/* } */
