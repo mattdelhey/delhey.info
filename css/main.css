@@ -281,8 +281,9 @@ a.post:link {
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
 }
 
+
 /*
- CSS for the main interaction
+ "Pure CSS Tabs" (https://codepen.io/markcaron/pen/MvGRYV)
 */
 .tabset > input[type="radio"] {
   position: absolute;
@@ -302,9 +303,6 @@ a.post:link {
   display: block;
 }
 
-/*
- "Pure CSS Tabs" (https://codepen.io/markcaron/pen/MvGRYV)
-*/
 
 .tabset > label {
   position: relative;
@@ -341,8 +339,14 @@ a.post:link {
   /* background: #001f3f; */
 }
 
+input:focus-visible + label {
+  outline: 2px solid rgba(0,102,204,1);
+  border-radius: 3px;
+}
+
 .tabset > label:hover,
-.tabset > input:focus + label {
+.tabset > input:focus + label,
+.tabset > input:checked + label {
   color: #003c7a;
 }
 
@@ -350,7 +354,7 @@ a.post:link {
 .tabset > input:focus + label::after,
 .tabset > input:checked + label::after {
   background: #003c7a;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .tabset > input:checked + label {
