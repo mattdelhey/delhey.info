@@ -1,6 +1,6 @@
 /* https://clrs.cc */
 
-html, body{
+body {
     overflow-x: hidden;
 }
 
@@ -68,6 +68,10 @@ li.post {
   color: rgb(0, 0, 0);
 }
 
+img {
+    border: 0.25px solid black;
+}
+
 .left {
   float: left;
   /* width: 42%; */
@@ -82,14 +86,12 @@ li.post {
   /* padding-right: 0px; */
 }
 
-img {
-    border: 0.25px solid black;
-}
 
 .right {
   max-width: 1000px;
   float: left;
-  margin-left: 35px;
+  margin-left: 10%;
+  margin-left: 40px;
     /* width: 55%; */
     /* height: 150%; */
   /* width: 54% */
