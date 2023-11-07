@@ -1,0 +1,41 @@
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    >input[type="radio"] {
+        display: none;
+
+        &:checked+.tab-label {
+            // this is the active tab
+            background-color: darkslategray;
+        }
+    }
+
+    >input[type="radio"]:first-child+.tab-label {
+        // target the first tab label
+        border-radius: 50px 0 0 50px;
+    }
+
+    >input[type="radio"]:last-of-type+.tab-label {
+        // target the last tab label
+        border-radius: 0 50px 50px 0;
+    }
+
+    >input[type="radio"]:not(:checked)+.tab-label+.tab-content {
+        // hide inactive tabs
+        display: none;
+    }
+
+    .tab-label {
+        padding: 5px 15px;
+        color: white;
+        background-color: slategray;
+    }
+
+    .tab-content {
+        order: 99;
+        width: 100%;
+        margin-top: 15px;
+        display: block;
+    }
+}
