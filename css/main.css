@@ -68,16 +68,20 @@ li.post {
   /* width: 375px; */
   width: 35%;
   /* min-width: 375px; */
-  max-width: 400px;
+  max-width: 350px;
   /* padding-left: 1%; */
   /* min-width: 450px; */
   /* padding-right: 0px; */
 }
 
+img {
+    border: 0.25px solid black;
+}
+
 .right {
   max-width: 1000px;
   float: left;
-  margin-left: 25px;
+  margin-left: 35px;
     /* width: 55%; */
     /* height: 150%; */
   /* width: 54% */
