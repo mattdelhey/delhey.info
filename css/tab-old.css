@@ -19,7 +19,7 @@
   display: block;
 }
 
-h3 {
+h3, input {
   display: inline-block;
 }
 
