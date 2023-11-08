@@ -29,6 +29,10 @@ h3 {
   font-size: 1em;
 }
 
+.h3-nav {
+  font-size: 22px;
+}
+
 p {
     margin-top: 0;
     font-weight: 400;
@@ -115,6 +119,7 @@ a:hover {
     text-decoration: underline;
     font-weight: bold;
     color: #003c7a;
+    color: #001f3f;
 }
 
 a:active {

@@ -4,7 +4,6 @@
 .tabset > input[type="radio"] {
   position: absolute;
   left: -200vw;
-  overflow: hidden;
 }
 
 .tabset .tab-panel {
@@ -20,9 +19,7 @@
   display: inline-block;
 }
 
-h3, input {
-  display: inline-block;
-}
+
 
 .tabset > label {
   position: relative;
@@ -32,7 +29,7 @@ h3, input {
   padding-top: 14px;
   padding-bottom: 0px;
   padding-right: 2.5%;
-  padding-right: 2%;
+  padding-right: 2.42%;
   /* border: 1px solid transparent; */
   border: 0px solid transparent;
   /* border-bottom: 1px solid transparent; */
@@ -68,14 +65,24 @@ input:focus-visible + label {
 .tabset > input:focus + label,
 .tabset > input:checked + label {
   color: #003c7a;
+  color: #001f3f;
 }
 
 .tabset > label:hover::after,
 .tabset > input:focus + label::after,
 .tabset > input:checked + label::after {
   background: #003c7a;
-  width: 90%;
+  background: #001f3f;
+  width: 85%;
 }
+
+.tabset > label:hover.name-tab::after,
+.tabset > input:focus.name-tab + label::after,
+.tabset > input:checked.name-tab + label::after {
+  background: none;
+  width: 85%;
+}
+
 
 .tabset > input:checked + label {
   border-color: #ccc;
@@ -90,18 +97,13 @@ input:focus-visible + label {
   border: 0;
 }
 
+/* Fix for Safari. */
+label {
+  display: inline-block;
+  clear: none;
+  float: left;
+}
 
-
-
-/* /\* */
-/*  Demo purposes only */
-/* *\/ */
-/* *, */
-/* *:before, */
-/* *:after { */
-/*   box-sizing: border-box; */
-/* } */
-
-/* .tabset { */
-/*   /\* max-width: 65em; *\/ */
-/* } */
+.h3-nav {
+  margin-top: 69px;
+}
