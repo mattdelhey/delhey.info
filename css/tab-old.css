@@ -19,6 +19,9 @@
   display: block;
 }
 
+h3 {
+  display: inline-block;
+}
 
 .tabset > label {
   position: relative;

@@ -1,8 +1,7 @@
 /* https://clrs.cc */
 
-h3, label {
+html, body {
     overflow-x: hidden;
-    overflow-x: clip;
 }
 
 body {
