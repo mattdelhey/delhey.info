@@ -4,6 +4,7 @@
 .tabset > input[type="radio"] {
   position: absolute;
   left: -200vw;
+  overflow: hidden;
 }
 
 .tabset .tab-panel {
@@ -16,7 +17,7 @@
 .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
 .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
 .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-  display: block;
+  display: inline-block;
 }
 
 h3, input {
