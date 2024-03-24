@@ -1,5 +1,15 @@
 /* https://clrs.cc */
 
+.abstract {
+  font-size: 18px;
+  line-height: 1;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    padding-left: 25px;
+    vertical-align: baseline;
+}
+
 body {
   min-width: 781px;
   padding: 35px;
